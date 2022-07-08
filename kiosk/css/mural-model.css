@@ -1,0 +1,47 @@
+/*model styles*/
+.top-head {
+	background-color: green;
+	overflow: auto;
+}
+
+.msm-logo {
+	float: left;
+	width: 100px;
+}
+
+main header.panel-head {
+	background-color: lightpink;
+	overflow: auto;
+	text-align: center;
+}
+
+.panel-nav {
+	float: right;
+}
+
+.panel-body {
+	display: grid;
+	grid-template-columns: 15% 1fr 15%;
+	grid-template-rows: 1;
+	grid-gap: 0;
+	background-color: yellow;
+}
+
+.prev-panel {
+	grid-column: 1;
+	grid-row: 1;
+}
+
+.guts {
+	grid-column: 2;
+	grid-row: 1;
+}
+
+.next-panel {
+	grid-column: 3;
+	grid-row: 1;
+}
+
+/*.panel-body img.panel-pics {
+	max-height: 100%;
+}*/
