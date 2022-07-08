@@ -10,8 +10,9 @@
   grid-area: title;
 }
 
-.content {
-  grid-area: content;
+.content-area {
+  grid-area: content-area;
+  display: grid;
 }
 
 .header {
@@ -25,9 +26,19 @@
 .panel-nav {
   grid-area: panel-nav;
 }
+
+.current-panel{
+  grid-area: current-panel;
+}
+
 .wrapper {
   background-color: #fff;
   color: #444;
+}
+
+.content-area {
+  grid-template-areas: 
+  "prev-panel current-panel next-panel";
 }
 
 /*smallest display*/
@@ -39,9 +50,7 @@
    "header"
    "panel-nav"
    "title"
-   "prev-panel"
-   "content"
-   "next-panel";
+   "content-area";
 }
 
 /*medium display
@@ -66,7 +75,7 @@
     grid-template-areas:
     "msm-link header panel-nav"
     "title title title"
-    "prev-panel content next-panel";
+    "content-area content-area content-area";
   }
 }
 
