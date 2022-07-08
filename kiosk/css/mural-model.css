@@ -1,12 +1,28 @@
 /*model styles*/
+body {
+	margin: 0;
+}
 .top-head {
-	background-color: green;
-	overflow: auto;
+	display: grid;
+	grid-template-columns: 15% 1fr 15%;
+	background-color: black;
+	text-align: center;
 }
 
-.msm-logo {
-	float: left;
-	width: 100px;
+.top-head .msm-link {
+	grid-column: 1;
+}
+
+.top-head .msm-link img {
+	max-width: 60%;
+}
+
+.top-head h1 {
+	grid-column: 2;
+}
+
+.top-head .panel-nav {
+	grid-column: 3;
 }
 
 main header.panel-head {
@@ -33,13 +49,28 @@ main header.panel-head {
 }
 
 .guts {
+	display: grid;
 	grid-column: 2;
 	grid-row: 1;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 2%;
 }
 
 .next-panel {
 	grid-column: 3;
 	grid-row: 1;
+}
+
+.guts .intro-text {
+	grid-column: 1;
+}
+
+.guts .panel-image {
+	grid-column: 2;
+}
+
+.guts .tabs {
+	grid-column: 3;
 }
 
 /*.panel-body img.panel-pics {
