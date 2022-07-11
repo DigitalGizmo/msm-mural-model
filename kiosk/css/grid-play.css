@@ -1,3 +1,7 @@
+body {
+  margin: 0;
+}
+
 .prev-panel {
   grid-area: prev-panel;
 }
@@ -6,17 +10,24 @@
   grid-area: next-panel;
 }
 
-.title {
-  grid-area: title;
+.panel-title {
+  grid-area: panel-title;
+  text-align: center;
 }
 
 .content-area {
   grid-area: content-area;
   display: grid;
+  grid-template-areas: 
+  "prev-panel current-panel next-panel";
 }
 
-.header {
-  grid-area: header;
+.content-area img {
+  max-height: 80vh;
+}
+
+.site-title {
+  grid-area: site-title;
 }
 
 .msm-link {
@@ -27,29 +38,55 @@
   grid-area: panel-nav;
 }
 
-.current-panel{
+.current-panel article {
+  grid-area: text;
+}
+
+.current-panel img {
+  grid-area: panel-image;
+}
+
+.current-panel .tabs {
+  grid-area: article-buttons;
+}
+
+.current-panel {
   grid-area: current-panel;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-gap: 5%;
+  grid-template-areas: 
+  "text"
+  "panel-image"
+  "article-buttons";
+  padding: 1em;
+  overflow: auto;
+}
+
+/*large display*/
+@media only screen and (min-width: 800px)   {
+  .current-panel {
+    /*grid-gap: 1em;*/
+    /*grid-template-columns: 120px auto 120px;*/
+    grid-template-areas:
+      "text panel-image article-buttons";
+  }
 }
 
 .wrapper {
-  background-color: #fff;
-  color: #444;
-}
-
-.content-area {
-  grid-template-areas: 
-  "prev-panel current-panel next-panel";
+  background-color: #000;
+  color: #fff;
 }
 
 /*smallest display*/
 .wrapper {
   display: grid;
-  grid-gap: 1em;
+  /*grid-gap: 1em;*/
   grid-template-areas:
    "msm-link"
-   "header"
+   "site-title"
    "panel-nav"
-   "title"
+   "panel-title"
    "content-area";
 }
 
@@ -70,25 +107,21 @@
 /*large display*/
 @media only screen and (min-width: 800px)   {
   .wrapper {
-    grid-gap: 1em;
+/*  grid-gap: 1em;*/
     grid-template-columns: 120px auto 120px;
     grid-template-areas:
-    "msm-link header panel-nav"
-    "title title title"
+    "msm-link site-title panel-nav"
+    "panel-title panel-title panel-title"
     "content-area content-area content-area";
   }
 }
 
-.box {
-  background-color: #444;
-  color: #fff;
-  border-radius: 5px;
-  padding: 10px;
-  font-size: 150%; 
+.site-title, .msm-link, .panel-nav {
+  background-color: black;
 }
 
-.header, .msm-link, .panel-nav {
-  background-color: #999;
+.panel-title {
+  background-color: gray;
 }
 
 .next-panel, .prev-panel {
