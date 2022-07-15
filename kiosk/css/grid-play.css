@@ -1,9 +1,5 @@
-body {
-  background-color: #000;
-  font-family: "futura", sans-serif;
-  margin: 0;
-}
 
+/* panel intro page */
 .msm-link {
   grid-area: msm-link;
 }
@@ -113,6 +109,16 @@ body {
   top: 30%;
   left: 20%;
 }
+
+/*work this into above
+.next-panel a img, .prev-panel a img {
+  position: absolute;
+  top: 45%;
+}
+
+.next-panel a img {
+  right: 2px;
+}*/
 .current-panel {
   grid-area: current-panel;
   display: grid;
