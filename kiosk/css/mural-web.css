@@ -264,8 +264,9 @@ nav.tabs {
   grid-area: text;
   padding: 1em;
 }
-.current-panel img {
+.current-panel .panel-image {
   grid-area: panel-image;
+  width: 40vw;
   margin: 0 auto;
 }
 .current-panel .tabs {
