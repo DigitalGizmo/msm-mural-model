@@ -21,13 +21,19 @@ h6 {
 p {
   margin: 0 0 0.8em;
 }
-a:link {
+a:link, a:visited {
   color: #eee;
   text-decoration: none;
   transition: color 150ms ease;
 }
 a:active, a:focus, a:hover {
   color: shade(#eee, 25%);
+}
+ul,
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 blockquote {
   background-color: #eee;
@@ -129,6 +135,7 @@ cite:before {
 .panel-title {
   color: #ff9933;
   grid-area: panel-title;
+  padding:  0 1em;
   text-align: center;
 }
 .prev-panel {
@@ -146,12 +153,12 @@ cite:before {
 }
 nav.tabs {
   justify-self: center;
-  width: 50%;
+  /*width: 50%;*/
 }
 /*large display*/
 @media only screen and (min-width: 800px)   {
   nav.tabs {
-    width: 90%;
+    /*width: 90%;*/
   }
 }
 .tabs ul {
@@ -232,7 +239,7 @@ nav.tabs {
 }
 .arrow {
   position: absolute;
-  top: 45%;
+  top: 15%;
 }
 .next-panel a img {
   right: 4px;
@@ -279,6 +286,7 @@ nav.tabs {
 /*small display*/
 .article-wrapper {
   display: grid;
+  grid-template-columns: 1fr auto 1fr;
   grid-template-areas:
    "msm-link site-title site-title"
    "panel-nav panel-nav panel-nav"
@@ -316,6 +324,7 @@ nav.tabs {
   grid-template-areas: 
     "tabs tabs tabs"
     "article-body panel-image learn-more";
+    grid-template-columns: 30% auto 30%;
   }
 }
 .content-area-article nav.tabs {
@@ -336,6 +345,107 @@ nav.tabs {
 }
 .article-wrapper .prev-panel, .article-wrapper .next-panel {/* for small layout, push panels down w dynamic top padding */
   background-color: #333;
-  height: 100px;
+  height: 50px;
   position: relative;
+}
+.learn-more ul li {
+  /*display: inline-block;
+  font-size: 0.75em;*/
+  line-height: 1.2;
+  margin-bottom: 1.6em;
+  vertical-align: top;
+  /*width: 29%;*/
+}
+.learn-more ul li:last-child {
+  margin-right: 0px;
+}
+.learn-more ul li img {
+  border: 1px solid #999;
+  display: block;
+  margin-bottom: .25em;
+}
+.learn-more ul li a {
+    color: #999;
+}
+
+/* POPS */
+
+.slimpop-wrapper {
+  background-color: white;
+  border: 1px solid #eee;
+  color: #444;
+  overflow: auto;
+  padding: 1.6em;
+  margin: auto;
+}
+.slimpop-wrapper h1 {
+  color: #ff9933;
+}
+.slimpop-wrapper h4.subhead {
+  color: #999;
+  margin-bottom: 0;
+}
+.slimpop-wrapper p {
+  font-size: 1.025em;
+}
+.pop-close {
+  float: right;
+}
+.pop-close a:link, .pop-close a:visited {
+  color: #ff9933;
+}
+#slimpop-overlay {
+  background: url(../images/overlay.png) repeat;
+  cursor: pointer;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 99;
+}
+#slimpop-container {
+  overflow-y: auto;
+  position: fixed;
+  /* this positions the slimpop relative to viewport, it won't scroll with the page */
+  left: 80px;
+  top: 8%;
+  z-index: 100;
+  width: 85%;
+  max-height: 85%;
+}
+.pop-img {
+  border-top: 6px solid #eee;
+  border-bottom: 6px solid #eee;
+  margin-bottom: 0.8em;
+  text-align: center;
+}
+.pop-img img {
+  border: 1px solid #eee;
+  margin-top: 0.8em;
+  max-height: 600px;
+}
+.pop-img p {
+  color: #999;
+  font-size: 0.75em !important;
+  text-align: left;
+}
+audio.voices {
+  width: 50%;
+}
+.slide-nav {
+  text-align: right;
+}
+.slide-nav ul li {
+  display: inline;
+}
+.slide-nav ul li span.no-more {
+  color: #aeaeae;
+}
+.slide-nav ul li a:link, .slide-nav ul li a:visited {
+  color: #444;
+}
+.slide-nav ul li a:hover {
+  color: #b35900;
+  text-decoration: underline;
 }
