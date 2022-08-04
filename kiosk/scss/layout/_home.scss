@@ -1,25 +1,42 @@
-// home layout
+// Layout Home
 
-.home {
-	padding: $base-spacing;
+.home header {
+	padding: $base-spacing 0;
 	text-align: center;
 
 	h1 {
 		color: $accent-color;
-		padding-top: $large-spacing;
 	}
 
 	p {
 		color: $base-font-color;
 		margin: $base-spacing auto;
 
-		&.intro {
-			font-size: $medlarge-font-size;
-			line-height: $heading-line-height;
-		}
-
 		a {
 			color: $accent-color;
 		}
+	}
+}
+
+.home-info p {
+  font-size: $smallish-font-size;
+  color: $medium-gray;
+}
+
+.mural-menu {
+  display: grid;
+  grid-gap: 1px;
+  grid-template-columns: repeat(11, minmax(160px, 1fr));
+  width: 100vw;
+  overflow-x: scroll;
+
+  a img {
+	  max-width: 100%;
+  }
+
+  h2 {
+	  color: $accent-color;
+	  font-size: $base-font-size;
+	  font-weight: normal;
 	}
 }

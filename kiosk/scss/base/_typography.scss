@@ -14,6 +14,11 @@ body {
   line-height: $base-line-height;
 }
 
+img {
+  margin: 0;
+  max-width: 100%;
+}
+
 h1,
 h2,
 h3,
@@ -25,38 +30,28 @@ h6 {
   margin: 0 0 $tiny-spacing 0;
 }
 
-
 p {
   margin: 0 0 $small-spacing;
 }
 
-a {
-  color: $action-color;
-  text-decoration: none;
-  transition: color $base-duration $base-timing;
-
-  &:active,
-  &:focus,
-  &:hover {
-    color: shade($action-color, 25%);
-  }
-}
-
-hr {
-  border-bottom: $base-border;
-  border-left: 0;
-  border-right: 0;
-  border-top: 0;
-  margin: $base-spacing 0;
-}
-
-img {
-  margin: 0;
-  max-width: 100%;
-}
-
 blockquote {
   font-style: italic;
+}
+// merge in with blockquote
+blockquote {
+  background-color: $light-gray;
+  font-style: italic;
+  max-height: 250px;
+  overflow: auto;
+  padding: 0 $base-spacing;
+}
+
+cite {
+  font-style: normal;
+}
+
+cite:before {
+  content: "– ";
 }
 
 .prompt, div.image p {
@@ -89,10 +84,11 @@ blockquote {
   p {
     font-size: $smallish-font-size;
     text-align: left;
-    line-height: 1.1em;
+    line-height: $heading-line-height;
 
     a {
       color: $accent-color;
-      font-weight: bold;    }
+      font-weight: bold;
     }
+  }
 }

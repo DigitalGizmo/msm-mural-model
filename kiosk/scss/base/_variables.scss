@@ -31,11 +31,12 @@ $xlarge-spacing: $base-spacing * 4;
 $dark-gray: #444 !default;
 $medium-gray: #999;
 $light-gray: #eee;
+$orange: #ff9933;
 
 // Font Colors
 $base-font-color: $light-gray !default;
 $light-font-color: $medium-gray;
-$accent-color: #ff9933;
+$accent-color: $orange;
 $action-color: $light-gray;
 $hover-color: darken($accent-color, 25%);
 
@@ -57,7 +58,7 @@ $base-z-index: 0;
 $form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
 $form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
 
-//shadows
+//Shadows
 $title-shadow: 1px 1px 2px black;
 $drop-shadow: 5px 5px 8px rgba(0, 0, 0, 0.65);
 $inside-shadow: 0px -6px 6px 1px $medium-gray inset;
